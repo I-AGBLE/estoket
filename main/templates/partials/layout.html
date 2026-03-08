@@ -1,20 +1,35 @@
+{% load static %}
+
 <!doctype html>
 <html lang="en">
+
+<!-- ----------------------------------Meta Section------------------------------------->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Estoket</title>
+
+
+<!-- ----------------------------------Links Section------------------------------------->
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<script src="{% static 'js/main.js' %}" defer></script>
   </head>
+
+<!-- ----------------------------------Nav Section------------------------------------->
   <body>
     <nav>
       <h1>nav section</h1>
     </nav>
-    <main>{% block content %} 
-        
+
+<!-- ----------------------------------Main Section------------------------------------->
+    <main>
+        {% block content %} 
+                
+        {% endblock content %}</main>
+    </main>
 
 
-        
-          {% endblock content %}</main>
+<!-- ----------------------------------Footer Section------------------------------------->
     <footer>
       <h1>footer</h1>
     </footer>
