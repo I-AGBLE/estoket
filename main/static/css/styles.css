@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap");
+
+* {
+  font-family: "Josefin Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  outline: 0;
+  align-items: center;
+  text-decoration: none;
+  line-height: 1;
+  align-items: center;
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+  scroll-padding-bottom: 2rem;
+  overflow-x: hidden;
+  color: var(--text_color);
+
+  ::-webkit-scrollbar {
+    width: 1.5px;
+  }
+}
+
+:root {
+  --default_bg: #f6f4f4;
+  --default_bg_variant: rgba(201, 199, 199, 0.2);
+  --default_border: rgba(161, 156, 156, 0.2);
+  --text_color_deep: #0d0d0d;
+  --text_color: #222121;
+  --text_color_variant: rgb(90, 89, 89);
+  --color_gold: #f8c641;
+  --color_danger: #f03333;
+  --box_shadow: 0 1.5rem 1.5rem rgba(224, 222, 222, 0.4);
+  --transition: all 300ms ease;
+  --border_radius: 0.3rem;
+}
+
+h1 {
+  font-size: 1.9rem;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+a {
+  font-weight: 600;
+  display: inline-block;
+}
+
+body {
+  background-color: var(--default_bg);
+}
+
+span {
+  color: var(--color_danger);
+}
+
+/* --------------------------------- Nav Section Styles ----------------------------------------------- */
+nav {
+  background-color: var(--default_bg_variant);
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 200;
+  margin: 0;
+  padding: 0.3rem 10rem;
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: var(--transition);
+  overflow: visible;
+  border-bottom: 1px solid var(--default_border);
+}
+
+nav:hover {
+  box-shadow: var(--box_shadow);
+}
+
+.nav_logo a {
+  width: 2rem;
+  height: 2rem;
+  overflow: hidden;
+}
+
+.nav_logo a:hover {
+  transition: var(--transition);
+  transform: scale(0.9);
+}
+
+.nav_logo a img {
+  width: 100%;
+  height: 100%;
+}
+
+.nav_search form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  background-color: var(--default_bg);
+  padding: 0.3rem 0.5rem;
+  width: 25rem;
+  border-radius: var(--border_radius);
+}
+
+.nav_search form input {
+  width: 100%;
+  border: none;
+  background-color: var(--default_bg);
+}
+
+.nav_search form button {
+  border: none;
+}
+
+.nav_search form button i {
+  color: var(--default_bg);
+  padding: 0.3rem 0.3rem;
+  background-color: var(--text_color);
+  border-radius: var(--border_radius);
+  margin-right: 0.15rem;
+}
+
+.nav_search form button i:hover {
+  background-color: var(--color_gold);
+  transition: var(--transition);
+  color: var(--text_color);
+  font-weight: 700;
+}
+
+.nav_search:focus-within {
+  border: 1px solid var(--text_color);
+  box-shadow: 0 0 0.5rem rgba(24, 23, 23, 0.5);
+  border-radius: var(--border_radius);
+  transition: var(--transition);
+}
+
+.nav_menu ul {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav_menu ul li:hover {
+  color: var(--color_danger);
+  transform: translateX(0.2rem);
+  transition: var(--transition);
+}
+
+.join a {
+  display: inline-block;
+  padding: 0.15rem 1rem;
+  border-radius: var(--border_radius);
+  border: 0.5px solid var(--text_color);
+  font-weight: 900;
+  transition: var(--transition);
+}
+
+.join a:hover {
+  background-color: var(--text_color);
+  color: var(--default_bg);
+}
+
+.nav_menu_button {
+  display: none;
+}
+
+/* --------------------------------- Main Section Styles ----------------------------------------------- */
+main {
+  margin-top: 3rem;
+}
+
+/* --------------------------------- Footer Page Styles ----------------------------------------------- */
+footer {
+  background-color: var(--default_bg_variant);
+  padding: 0 5rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 200;
+  height: 2.5rem;
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: var(--transition);
+}
+
+center p {
+  font-size: 0.8rem;
+  padding-top: 0.9rem;
+}

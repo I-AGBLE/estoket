@@ -1,0 +1,102 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<!-- ----------------------------------Meta Section------------------------------------->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estoket</title>
+
+
+<!-- ----------------------------------Links Section------------------------------------->
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<script src="{% static 'js/main.js' %}" defer></script>
+
+    <!--Google's Material Font-->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+          <!--
+          TODO: Set title bar icon 
+          -->
+    <!-- Title bar icon
+    <link rel="icon" type="image/png" href="{% static 'main/images/logo.png' %}">
+    -->
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<!-- ----------------------------------Nav Section------------------------------------->
+  <body>
+    <nav>
+      <div class="nav_logo">
+        <a href="">
+          <img src="{% static 'images/logo.png' %}" alt="Estoket Logo">
+        </a>
+      </div>
+
+  <div class="nav_search">
+    <form action="" method="GET">
+        <input 
+            type="text" 
+            name="" 
+            placeholder="What service are you looking for today?"
+        >
+        <button type="submit"><i class="fas fa-search"></i></button>
+    </form>
+</div>
+
+      <div class="nav_menu">
+        <ul>
+          <!--
+          TODO: "Become a seller" link should link to a page thats like the home page but with non-clickable cards. Ref: https://www.fiverr.com/start_selling?source=top_nav
+          -->
+          <li>
+            <a href="">Become a seller</a> 
+          </li>
+
+            <li>
+            <a href="">Sign In</a>
+          </li>
+
+            <!--
+          TODO: "Join" link should lead to sign up page
+            -->
+          <li class="join">
+            <a href="">Join</a>
+          </li>
+        </ul>
+      </div>
+
+        <div class="nav_menu_button">
+            <div class="open_menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="close_menu">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+    </nav>
+
+<!-- ----------------------------------Main Section------------------------------------->
+    <main>
+        {% block content %} 
+                
+        {% endblock content %}</main>
+    </main>
+
+
+<!-- ----------------------------------Footer Section------------------------------------->
+       <footer>
+        <center>
+            <a href="">
+                <p>&copy;2026 Built on Agble Technologies. All rights reserved.</p>
+            </a>
+        </center>
+    </footer>
+  </body>
+</html>
