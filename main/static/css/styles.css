@@ -34,6 +34,7 @@
   --color_gold: #f8c641;
   --color_danger: #f03333;
   --box_shadow: 0 1.5rem 1.5rem rgba(224, 222, 222, 0.4);
+  --box_shadow_dark: 0 4px 10px rgba(161, 156, 156, 0.2);
   --transition: all 300ms ease;
   --border_radius: 0.3rem;
 }
@@ -223,7 +224,7 @@ main {
 }
 
 .hero_search {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .hero_search form {
@@ -264,7 +265,7 @@ main {
 
 .hero_search:focus-within {
   border: 1px solid var(--text_color);
-  box-shadow: 0 0 .5rem rgba(232, 230, 230, 0.4);
+  box-shadow: 0 0 .8rem rgba(232, 230, 230, 0.2);
   border-radius: var(--border_radius);
   transition: var(--transition);
   width: 50vw;
@@ -301,6 +302,46 @@ main {
   align-items: center;
   justify-content: center;
 }
+
+/* --------------------------------- Service Cards Section Styles ----------------------------------------------- */
+.service_cards {
+  padding: 2rem 10rem;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.service_card {
+  border: 1px solid var(--default_border);
+  border-radius: var(--border_radius);
+  padding: .5rem;
+  transition: var(--transition);
+  height: 6rem;
+  display: grid;
+  gap: .5rem;
+}
+
+.service_cards a {
+  transition: var(--transition);
+}
+.service_cards a:hover {
+  box-shadow: var(--box_shadow);
+  transform: scale(.98);
+}
+
+.service_card_icon {
+  width: 2rem;
+  height: 2rem;
+  overflow: hidden;
+}
+
+.service_card_icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 
 /* --------------------------------- Footer Page Styles ----------------------------------------------- */
 footer {
