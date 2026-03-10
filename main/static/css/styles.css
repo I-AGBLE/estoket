@@ -393,6 +393,49 @@ main {
   overflow: hidden;
 }
 
+/* --------------------------------- Popular Services Styles ----------------------------------------------- */
+.pro_ad_section {
+  padding: 2rem 10rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.pro_ad_section_title {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--default_border);
+  padding-bottom: .5rem;
+}
+
+.pro_ad_section_title a {
+  background-color: var(--text_color);
+  color: var(--default_bg_deep);
+  padding: .5rem 1rem;
+  border-radius: var(--border_radius);
+  transition: var(--transition);
+}
+
+.pro_ad_section_title a:hover {
+  background-color: var(--default_bg_deep);
+  color: var(--text_color);
+  box-shadow: var(--box_shadow_dark);
+}
+
+.pro_ad_section_cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: .5rem;
+}
+
+.pro_ad_section_card {
+  display: grid;
+  gap: .5rem;
+}
+
+.pro_ad_section_card_icon i {
+  font-size: 3rem;
+}
+
 /* --------------------------------- Footer Page Styles ----------------------------------------------- */
 footer {
   background-color: var(--default_bg_variant);
