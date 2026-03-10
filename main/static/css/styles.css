@@ -26,6 +26,7 @@
 
 :root {
   --default_bg: #fbfafa;
+  --default_bg_deep: #f2f0f0;
   --default_bg_variant: rgba(87, 87, 87, 0.2);
   --default_border: rgba(161, 156, 156, 0.2);
   --text_color_deep: #0d0d0d;
@@ -34,7 +35,7 @@
   --color_gold: #f8c641;
   --color_danger: #f03333;
   --box_shadow: 0 1.5rem 1.5rem rgba(224, 222, 222, 0.4);
-  --box_shadow_dark: 0 4px 10px rgba(161, 156, 156, 0.2);
+  --box_shadow_dark: 3px 6px 15px rgba(161, 156, 156, 0.2);
   --transition: all 300ms ease;
   --border_radius: 0.3rem;
 }
@@ -192,6 +193,7 @@ nav:hover {
 /* --------------------------------- Main Section Styles ----------------------------------------------- */
 main {
   margin-top: 3rem;
+  padding-bottom: 5rem;
 }
 
 /* --------------------------------- Main Hero Section Styles ----------------------------------------------- */
@@ -265,7 +267,7 @@ main {
 
 .hero_search:focus-within {
   border: 1px solid var(--text_color);
-  box-shadow: 0 0 .8rem rgba(232, 230, 230, 0.2);
+  box-shadow: 0 0 0.8rem rgba(232, 230, 230, 0.2);
   border-radius: var(--border_radius);
   transition: var(--transition);
   width: 50vw;
@@ -309,25 +311,25 @@ main {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 2rem;
-  margin-bottom: 2rem;
 }
 
 .service_card {
   border: 1px solid var(--default_border);
   border-radius: var(--border_radius);
-  padding: .5rem;
+  padding: 0.5rem;
   transition: var(--transition);
   height: 6rem;
   display: grid;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .service_cards a {
   transition: var(--transition);
+  box-shadow: var(--box_shadow_dark);
 }
 .service_cards a:hover {
   box-shadow: var(--box_shadow);
-  transform: scale(.98);
+  transform: scale(0.98);
 }
 
 .service_card_icon {
@@ -342,6 +344,51 @@ main {
   object-fit: cover;
 }
 
+/* --------------------------------- Popular Services Styles ----------------------------------------------- */
+.popular_services {
+  padding: 0 10rem;
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.popular_services_cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.popular_service_card {
+  border: 1px solid var(--default_border);
+  border-radius: var(--border_radius);
+  padding: 0.5rem;
+  transition: var(--transition);
+  display: grid;
+  gap: 2rem;
+  background-color: var(--default_bg_variant);
+  height: 20rem;
+}
+
+.popular_service_card:hover {
+  box-shadow: var(--box_shadow);
+  transform: scale(0.98);
+}
+
+.popular_service_card_image {
+  height: 15rem;
+  width: 100%;
+  border-radius: var(--border_radius);
+  padding: .5rem;
+  background-color: var(--default_border);
+}
+
+.popular_service_card_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--border_radius);
+  overflow: hidden;
+}
 
 /* --------------------------------- Footer Page Styles ----------------------------------------------- */
 footer {
