@@ -36,8 +36,8 @@
   --color_gold: #f8c641;
   --color_dark_medium: #e6e6e6;
   --color_danger: #f03333;
-  --box_shadow: 0 1.5rem 1.5rem rgba(224, 222, 222, 0.4);
-  --box_shadow_dark: 3px 6px 15px rgba(161, 156, 156, 0.2);
+  --box_shadow: 0 .5rem .5rem rgba(224, 222, 222, 0.4);
+  --box_shadow_dark: .5rem .5rem .5rem rgba(161, 156, 156, 0.2);
   --transition: all 300ms ease;
   --border_radius: 0.3rem;
 }
@@ -348,6 +348,34 @@ main {
   object-fit: cover;
 }
 
+/* ---------------------------------  Services Flyer Styles ----------------------------------------------- */
+.services_flyer center {
+  margin: 1rem 10rem;
+  background-color: var(--color_dark_medium);
+  color: var(--default_bg);
+  padding: 3rem;
+  border-radius: var(--border_radius);
+  display: grid;
+  gap: 2rem;
+}
+
+
+
+.service_flyer_link a {
+  background-color: var(--color_gold);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border_radius);
+  color: var(--text_color);
+  transition: var(--transition);
+}
+
+.service_flyer_link a:hover {
+  background-color: var(--text_color);
+  border-radius: var(--border_radius);
+  color: var(--default_bg);
+  box-shadow: var(--box_shadow);
+}
+
 /* --------------------------------- Popular Services Styles ----------------------------------------------- */
 .popular_services {
   padding: 0 10rem;
@@ -434,6 +462,62 @@ main {
 
 .pro_ad_section_card_icon i {
   font-size: 3rem;
+}
+
+/* --------------------------------- Banner Section Styles ----------------------------------------------- */
+.banner_section {
+  margin: 2rem 10rem;
+  display: grid;
+  gap: 2rem;
+  background-color: var(--color_dark_medium);
+  border-radius: var(--border_radius);
+  padding: 2rem;
+}
+
+.banner_section_contents {
+  display: flex;
+  gap: 5rem;
+}
+
+.banner_left {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.banner_right {
+  width: 15rem;
+  border-radius: var(--border_radius)
+}
+.banner_right img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: top;
+}
+
+.banner_left ul {
+  display: grid;
+  gap: .5rem;
+  list-style: disc;
+}
+
+.banner_left ul li {
+  list-style: disc;
+  list-style-position: inside;
+}
+
+.banner_link a {
+  background-color: var(--text_color);
+  color: var(--default_bg);
+  padding: .3rem .5rem;
+  border-radius: var(--border_radius);
+  transition: var(--transition);
+}
+
+.banner_link a:hover {
+  background-color: var(--default_bg);
+  color: var(--text_color);
+  box-shadow: var(--box_shadow_dark);
 }
 
 /* --------------------------------- Footer Page Styles ----------------------------------------------- */
