@@ -2,4 +2,4 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-    return render(request, 'market_place/index.html')
+    return render(request, 'public/index.html')
