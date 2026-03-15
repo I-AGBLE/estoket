@@ -1,5 +1,6 @@
 {% extends 'z_partials/layout.html' %} {% load static %} {% block content %}
 
+<!-- ----------------------------------  Page For One Section ------------------------------------->
 <div class="service_details_container">
   <div class="service_details">
     <div class="service_details_title">
@@ -52,6 +53,7 @@
       </div>
     </div>
 
+    <!-- ---------------------------------- Skillset Display Section ------------------------------------->
     <div class="service_owner_skillset">
       <div class="skillset">
         <h4>Programming Languages</h4>
@@ -94,6 +96,7 @@
       </div>
     </div>
 
+    <!-- ----------------------------------Service Owner's Contact Display Section ------------------------------------->
     <div class="contact_service_owner">
       <div class="contact_service_owner_title">
         <h4>Get to know James Gunner</h4>
@@ -126,6 +129,7 @@
     </div>
   </div>
 
+  <!-- ---------------------------------- Owner's Bio Section ------------------------------------->
   <div class="more_about_service">
     <div class="bio">
       <div class="bio_location">
@@ -152,6 +156,7 @@
     </div>
   </div>
 
+  <!-- ---------------------------------- Service Packages Section ------------------------------------->
   <div class="service_packages">
     <div class="service_packages_title">
       <h4>Service Packages</h4>
@@ -223,6 +228,7 @@
     </div>
   </div>
 
+  <!-- ---------------------------------- FAQ's Section ------------------------------------->
   <section class="faq_section">
     <div class="faq_title">
       <h3>Frequently Asked Questions</h3>
@@ -235,10 +241,10 @@
           <span class="faq_icon"><i class="fa-solid fa-plus"></i></span>
         </div>
         <div class="faq_answer">
-         <p> 
-          I will need your business details, preferred design style, content,
-          images, and any specific features you want on the website.
-        </p>
+          <p>
+            I will need your business details, preferred design style, content,
+            images, and any specific features you want on the website.
+          </p>
         </div>
       </div>
 
@@ -255,7 +261,7 @@
 
       <div class="faq_item">
         <div class="faq_question">
-         <h4> Will my website be mobile responsive?</h4>
+          <h4>Will my website be mobile responsive?</h4>
           <span class="faq_icon"><i class="fa-solid fa-plus"></i></span>
         </div>
         <div class="faq_answer">
@@ -266,147 +272,5 @@
     </div>
   </section>
 
-
-
-  <script>
-    const faqItems = document.querySelectorAll(".faq_item");
-
-    faqItems.forEach((item) => {
-      const question = item.querySelector(".faq_question");
-
-      question.addEventListener("click", () => {
-        item.classList.toggle("active");
-      });
-    });
-  </script>
 </div>
-
-<!--
-<style>
-  .swiper {
-    width: 100%;
-    height: 100%;
-  }
-
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #444;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  body {
-    background: #000;
-    color: #000;
-  }
-
-  .swiper {
-    width: 100%;
-    height: 300px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .swiper-slide {
-    background-size: cover;
-    background-position: center;
-  }
-
-  .mySwiper2 {
-    height: 80%;
-    width: 100%;
-  }
-
-  .mySwiper {
-    height: 20%;
-    box-sizing: border-box;
-    padding: 10px 0;
-  }
-
-  .mySwiper .swiper-slide {
-    width: 25%;
-    height: 100%;
-    opacity: 0.4;
-  }
-
-  .mySwiper .swiper-slide-thumb-active {
-    opacity: 1;
-  }
-
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-</style>
-
-<div
-  style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
-  class="swiper mySwiper2"
->
-  <div class="swiper-wrapper">
-    <div class="swiper-slide">
-      <img src="{% static 'images/logo.png' %}" alt="" />
-    </div>
-
-    <div class="swiper-slide">
-      <img src="{% static 'images/logo.png' %}" alt="" />
-    </div>
-    <div class="swiper-slide">
-      <img src="{% static 'images/logo.png' %}" alt="" />
-    </div>
-  </div>
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
-</div>
-<div class="swiper mySwiper">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide">
-      <img src="{% static 'images/logo.png' %}" alt="" />
-    </div>
-
-    <div class="swiper-slide">
-      <img src="{% static 'images/logo.png' %}" alt="" />
-    </div>
-    <div class="swiper-slide">
-      <img src="{% static 'images/logo.png' %}" alt="" />
-    </div>
-  </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    var swiper = new Swiper(".mySwiper", {
-      spaceBetween: 10,
-      slidesPerView: 4,
-      freeMode: true,
-      watchSlidesProgress: true,
-    });
-
-    var swiper2 = new Swiper(".mySwiper2", {
-      spaceBetween: 10,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      thumbs: {
-        swiper: swiper,
-      },
-    });
-  });
-</script>
--->
-
 {% endblock content %}

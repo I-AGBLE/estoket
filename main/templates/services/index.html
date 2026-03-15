@@ -1,10 +1,12 @@
 {% extends 'z_partials/layout.html' %} {% load static %} {% block content %}
 
+<!-- ---------------------------------- All Services Page ------------------------------------->
 <div class="all_services_container">
   <div class="services_top">
     <h1>Explore our services</h1>
   </div>
 
+  <!-- ---------------------------------- All Services Section ------------------------------------->
   <div class="all_services">
     <div class="service">
       <div class="service_images">
@@ -196,34 +198,5 @@
     </div>
   </div>
 </div>
-
-<div class="swiper mySwiper">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide">
-      <img src="{% static 'images/logo.png' %}" alt="" />
-    </div>
-  </div>
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-pagination"></div>
-</div>
-
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-
-<script>
-  var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    pagination: {
-      el: ".swiper-pagination",
-      type: "progressbar",
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-</script>
 
 {% endblock %}
