@@ -32,12 +32,12 @@
   --text_color_deep: #0d0d0d;
   --text_color: #222121;
   --text_color_variant: rgb(90, 89, 89);
-  --color_dark_light:	#f2f2f2;
+  --color_dark_light: #f2f2f2;
   --color_gold: #f8c641;
   --color_dark_medium: #e6e6e6;
   --color_danger: #f03333;
-  --box_shadow: 0 .5rem .5rem rgba(224, 222, 222, 0.4);
-  --box_shadow_dark: .5rem .5rem .5rem rgba(161, 156, 156, 0.2);
+  --box_shadow: 0 0.5rem 0.5rem rgba(224, 222, 222, 0.4);
+  --box_shadow_dark: 0.5rem 0.5rem 0.5rem rgba(161, 156, 156, 0.2);
   --transition: all 300ms ease;
   --border_radius: 0.3rem;
 }
@@ -49,22 +49,22 @@ h1 {
 
 h2 {
   font-size: 1.6rem;
-  font-weight: 800;
+  font-weight: 850;
 }
 
 h3 {
   font-size: 1.3rem;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 h4 {
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 800;
 }
 
 p {
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 550;
 }
 
 a {
@@ -359,8 +359,6 @@ main {
   gap: 2rem;
 }
 
-
-
 .service_flyer_link a {
   background-color: var(--color_gold);
   padding: 0.5rem 1rem;
@@ -411,6 +409,7 @@ main {
   height: 15rem;
   width: 100%;
   border-radius: var(--border_radius);
+  overflow: hidden;
 }
 
 .popular_service_card_image img {
@@ -432,13 +431,13 @@ main {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid var(--default_border);
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
 }
 
 .pro_ad_section_title a {
   background-color: var(--text_color);
   color: var(--default_bg_deep);
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   border-radius: var(--border_radius);
   transition: var(--transition);
 }
@@ -452,12 +451,12 @@ main {
 .pro_ad_section_cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .pro_ad_section_card {
   display: grid;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .pro_ad_section_card_icon i {
@@ -486,7 +485,7 @@ main {
 
 .banner_right {
   width: 15rem;
-  border-radius: var(--border_radius)
+  border-radius: var(--border_radius);
 }
 .banner_right img {
   width: 100%;
@@ -497,7 +496,7 @@ main {
 
 .banner_left ul {
   display: grid;
-  gap: .5rem;
+  gap: 0.5rem;
   list-style: disc;
 }
 
@@ -509,7 +508,7 @@ main {
 .banner_link a {
   background-color: var(--text_color);
   color: var(--default_bg);
-  padding: .3rem .5rem;
+  padding: 0.3rem 0.5rem;
   border-radius: var(--border_radius);
   transition: var(--transition);
 }
@@ -540,7 +539,6 @@ center p {
   padding-top: 0.9rem;
 }
 
-
 .all_services_container {
   margin: 2rem 10rem;
   display: grid;
@@ -570,17 +568,17 @@ center p {
 
 .service {
   display: grid;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .service_owner {
   display: flex;
-  gap: .5rem;
+  gap: 0.5rem;
   align-items: center;
 }
 
 .service_owner:hover {
-  transform: translateX(.2rem);
+  transform: translateX(0.2rem);
 }
 
 .service_owner_image {
@@ -601,6 +599,196 @@ center p {
   text-decoration: underline;
 }
 
+.service_details_container {
+  margin: 2rem 10rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.service_details {
+  display: grid;
+  gap: 1rem;
+}
+
+.service_details_about {
+  display: grid;
+  gap: 1rem;
+}
+
+.service_details_images {
+  height: 30rem;
+  width: 35rem;
+  border-radius: var(--border_radius);
+  overflow: hidden;
+}
+
+.service_details_images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--border_radius);
+  overflow: hidden;
+}
+
+.service_details_text {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.service_owner_skillset {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.skillset {
+  background-color: var(--color_dark_light);
+  padding: 0.5rem;
+  border-radius: var(--border_radius);
+  display: grid;
+  gap: 0.5rem;
+  height: 6rem;
+  border: 1px solid var(--default_border);
+}
+
+.skillset h4 {
+  text-decoration: underline;
+}
+
+.contact_service_owner {
+  display: grid;
+  margin-top: 1rem;
+}
+
+.contact_service_owner {
+  display: grid;
+  gap: 1rem;
+}
+
+.service_owner_details {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.service_owner_about p {
+  width: 25rem;
+}
+
+.contact_service_owner_btn a {
+  background-color: var(--text_color_variant);
+  color: var(--default_bg);
+  padding: 0.3rem 0.5rem;
+  border-radius: var(--border_radius);
+  transition: var(--transition);
+}
+
+.contact_service_owner_btn a:hover {
+  background-color: var(--color_dark_medium);
+  color: var(--text_color);
+  box-shadow: var(--box_shadow_dark);
+}
+
+.more_about_service {
+  display: grid;
+  gap: 1rem;
+  border: 1px solid var(--default_border);
+  width: 50%;
+  padding: 0.5rem;
+}
+
+.bio {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  border-bottom: 1px solid var(--default_border);
+  padding-bottom: 0.5rem;
+}
+.service_packages {
+  display: grid;
+  gap: 1rem;
+}
+
+.service_packages_list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.service_package {
+  display: grid;
+  gap: 0.5rem;
+  border: 1px solid var(--default_border);
+  padding: 0.5rem;
+  border-radius: var(--border_radius);
+  transition: var(--transition);
+  background-color: var(--color_dark_light);
+}
+
+.service_package:hover {
+  box-shadow: var(--box_shadow_dark);
+  background-color: var(--color_dark_medium);
+}
+
+.service_package_btn a {
+  background-color: var(--text_color_variant);
+  color: var(--default_bg);
+  padding: 0.3rem 0.5rem;
+  border-radius: var(--border_radius);
+  transition: var(--transition);
+  margin-top: 1rem;
+}
+
+.service_package_btn a:hover {
+  background-color: var(--color_dark_medium);
+  color: var(--text_color);
+  box-shadow: var(--box_shadow_dark);
+}
+
+.service_package_title h4 {
+  text-decoration: underline;
+}
+
+.faq_section {
+  max-width: 100%;
+  display: grid;
+  gap: 1rem;
+}
+
+
+.faq_item {
+  border-bottom: 1px solid var(--default_border);
+  padding: .5rem 0;
+}
+
+.faq_question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq_icon {
+  font-size: 1rem;
+}
+
+.faq_answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+  color: var(--text_color_variant);
+  margin: 1rem 0;
+}
+
+.faq_item.active .faq_answer {
+  max-height: 200px;
+}
+
+.faq_item.active .faq_icon i {
+  transform: rotate(45deg);
+  color: var(--color_danger);
+}
 
 
 
@@ -611,9 +799,12 @@ center p {
 
 
 
-  .swiper {
+
+
+
+.swiper {
   width: 4rem;
-  height: 4rem; 
+  height: 4rem;
 }
 
 .swiper-slide {
@@ -627,6 +818,6 @@ center p {
 
 .swiper-slide img {
   width: 100%;
-  height: 100%; 
+  height: 100%;
   object-fit: contain; /* don't crop */
 }

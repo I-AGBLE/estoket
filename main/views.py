@@ -6,3 +6,6 @@ def index(request):
 
 def all_services(request):
     return render(request, 'services/index.html')
+
+def service(request):
+    return render(request, 'services/service.html')
