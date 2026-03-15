@@ -1,0 +1,24 @@
+{% extends "z_partials_users/layout.html" %} {% load static %} {%block content%}
+
+<div class="form_section">
+  <div class="form_section_note">
+    <h1>Sign In</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos iure
+      quos enim quam deserunt eum quis tempore accusantium fugiat doloremque!
+    </p>
+  </div>
+
+  <form action="" method="POST">
+    {% csrf_token %} {{ form.as_p }}
+
+    <div class="show_password">
+      <input type="checkbox" id="showPassword" />
+      <label for="showPassword">Show Password</label>
+    </div>
+
+    <button type="submit">Sign In</button>
+  </form>
+</div>
+
+{% endblock content %}

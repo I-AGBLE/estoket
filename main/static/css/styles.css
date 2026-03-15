@@ -793,7 +793,83 @@ center p {
 }
 
 
+/* --------------------------------- Forms Styles ----------------------------------------------- */
+.form_section {
+  display: grid;
+  gap: 2rem;
+  margin: 4rem 20rem;
+  border: 1px solid var(--default_border);
+  padding: 3rem;
+  border-radius: var(--border_radius);
+  background-color: var(--color_dark_medium);
+  transition: var(--transition);
+}
 
+.form_section:hover {
+  box-shadow: var(--box_shadow_dark);
+}
+
+.form_section_note {
+  display: grid;
+  gap: .5rem;
+}
+
+form {
+  gap: 1rem;
+}
+
+.form_section input[type="text"],
+.form_section input[type="password"],
+.form_section input[type="email"],
+.form_section textarea,
+.form_section select {
+    width: 100%;              
+    padding: .5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--default_border);
+    background-color: var(--color_dark_light);
+    border-radius: var(--border_radius);
+    box-sizing: border-box;    
+    transition: var(--transition);
+    font-weight: 650;
+    font-size: 1rem;
+}
+
+.form_section input:focus,
+.form_section textarea:focus,
+.form_section select:focus {
+    border-color: var(--text_color);    /* focus color */
+    box-shadow: 0 0 5px rgba(16, 16, 16, 0.3);
+    outline: none;
+}
+
+.form_section button {
+  background-color: var(--text_color_variant);
+  color: var(--default_bg);
+  padding: 0.5rem;
+  border-radius: var(--border_radius);
+  transition: var(--transition);
+  font-size: 1rem;
+  font-weight: 650;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.form_section button:hover {
+  color: var(--color_dark_medium);
+  background-color: var(--text_color);
+  box-shadow: var(--box_shadow_dark);
+}
+
+.show_password {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.show_password label {
+  font-size: .8rem;
+}
 
 
 

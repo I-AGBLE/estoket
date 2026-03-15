@@ -8,3 +8,14 @@ faqItems.forEach((item) => {
         item.classList.toggle("active");
     });
 });
+
+// Show Password
+const passwordInput = document.querySelector('input[type="password"]');
+const showPassword = document.getElementById("showPassword");
+showPassword.addEventListener("change", function () {
+    if (this.checked) {
+        passwordInput.type = "text";
+    } else {
+        passwordInput.type = "password";
+    }
+});
