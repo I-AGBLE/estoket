@@ -61,14 +61,14 @@
           </li>
 
             <li>
-            <a href="">Sign In</a>
+            <a href="{% url 'app_users:index' %}">Sign In</a>
           </li>
 
             <!--
           TODO: "Join" link should lead to sign up page
             -->
           <li class="join">
-            <a href="">Join</a>
+            <a href="{% url 'app_users:signup' %}">Join</a>
           </li>
         </ul>
       </div>

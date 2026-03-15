@@ -831,8 +831,13 @@ form {
     border-radius: var(--border_radius);
     box-sizing: border-box;    
     transition: var(--transition);
-    font-weight: 650;
+    font-weight: 550;
     font-size: 1rem;
+}
+
+.form_section textarea {
+  resize: none;
+  height: 10rem;
 }
 
 .form_section input:focus,

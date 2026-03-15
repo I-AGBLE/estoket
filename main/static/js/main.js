@@ -10,12 +10,12 @@ faqItems.forEach((item) => {
 });
 
 // Show Password
-const passwordInput = document.querySelector('input[type="password"]');
+const password = document.getElementById("id_password");
+const confirmPassword = document.getElementById("id_confirm_password");
 const showPassword = document.getElementById("showPassword");
+
 showPassword.addEventListener("change", function () {
-    if (this.checked) {
-        passwordInput.type = "text";
-    } else {
-        passwordInput.type = "password";
-    }
+    const type = this.checked ? "text" : "password";
+    password.type = type;
+    confirmPassword.type = type;
 });
