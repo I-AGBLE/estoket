@@ -76,7 +76,15 @@ class SignupForm(forms.Form):
 
     about = forms.CharField(
         label="",
-        max_length=1000,
-        required=False,
+        max_length=200,
+        required=True,
         widget=forms.Textarea(attrs={"placeholder": "Tell us about yourself..."}),
     )
+    
+    bio = forms.CharField(
+        label="",
+        max_length=1000,
+        required=True,
+        widget=forms.Textarea(attrs={"placeholder": "Tell us about yourself..."}),
+    )
+
