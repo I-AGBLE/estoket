@@ -38,3 +38,13 @@ backBtn.addEventListener("click", function () {
     accountAuth.style.display = "none";
     socialAuth.style.display = "block";
 });
+
+// auth container display
+function toggleAuth() {
+    const authContainer = document.querySelector('.floating_container'); // select by class
+    if (authContainer.style.display === 'none' || authContainer.style.display === '') {
+        authContainer.style.display = 'block';
+    } else {
+        authContainer.style.display = 'none';
+    }
+}

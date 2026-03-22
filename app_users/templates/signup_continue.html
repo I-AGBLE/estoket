@@ -3,7 +3,7 @@
 
 <div class="form_section">
   <div class="form_section_note">
-    <h1>Sign Up</h1>
+    <h1>Complete Sign Up Process</h1>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos iure
       quos enim quam deserunt eum quis tempore accusantium fugiat doloremque!
@@ -11,33 +11,26 @@
   </div>
 
   <form action="" method="POST">
-    {% csrf_token %}
-
-    <div class="auth_link">
-      <a href="{% url 'app_users:signup_continue' %}">
-        <i class="fa-brands fa-google"></i>
-        <p>Sign in with Google</p>
-      </a>
-    </div>
+    {% csrf_token %} {{ signup_form.as_p }}
     <!--
-      {{ sign_up_form.as_p }}
-
       <div class="show_password">
       <input type="checkbox" id="showPassword" />
       <label for="showPassword">Show Password</label>
-
-    <button type="submit">Submit</button>
-
     </div>
 -->
 
-    <!--
+<div class="form_button">
+    <a href="">Continue Registration</a>
+</div>
+
+       <!--
     <p>
       Already have an account?
       <a href="javascript:void(0)" onclick="toggleAuth()">Sign In</a>
     </p>
-  --></form>
-  <!--
+  -->
+  </form>
+<!--
     <p>or</p>
 
   <div class="social_auth">
@@ -50,6 +43,7 @@
   </div>
 
   -->
+
 </div>
 
 {% endblock content %}

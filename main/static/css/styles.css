@@ -1182,8 +1182,25 @@ form {
   box-shadow: var(--box_shadow_dark);
 }
 
-/*
 .floating_container {
   display: none;
 }
 
+.form_section form  p a {
+  display: inline; 
+  vertical-align: baseline; 
+  color: inherit;
+  text-decoration: underline; 
+}
+
+.form_button a {
+  background-color: var(--color_gold);
+  padding: .5rem;
+  border-radius: var(--border_radius);
+  transition: var(--transition);
+}
+
+.form_button a:hover {
+  background-color: var(--text_color_variant);
+  color: var(--default_bg);
+}

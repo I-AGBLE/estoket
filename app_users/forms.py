@@ -30,6 +30,7 @@ class LoginForm(forms.Form):
 
 
 class SignupForm(forms.Form):
+    """
     username = forms.CharField(
         max_length=50,
         label="",
@@ -42,6 +43,30 @@ class SignupForm(forms.Form):
         ),
     )
 
+    email = forms.EmailField(max_length=100, 
+        label="",
+        widget=forms.EmailInput(
+            attrs={
+                "placeholder": "Email",
+                "required": True,
+            }
+        ),
+    )
+"""
+    USER_TYPE_CHOICES = [
+    ('freelancer', 'Freelancer'),
+    ('company', 'Company'),
+    ('other', 'Other'),
+]
+
+    # Correct field for choices
+    user_type = forms.ChoiceField(
+        label="",
+        choices=USER_TYPE_CHOICES,
+        initial='other',  # default selection
+        widget=forms.Select(attrs={'class': 'form-control'})
+    )
+    """
     password = forms.CharField(
         max_length=50,
         label="",
@@ -63,28 +88,4 @@ class SignupForm(forms.Form):
             }
         ),
     )
-
-    email = forms.EmailField(max_length=100, 
-        label="",
-        widget=forms.EmailInput(
-            attrs={
-                "placeholder": "Email",
-                "required": True,
-            }
-        ),
-    )
-
-    about = forms.CharField(
-        label="",
-        max_length=200,
-        required=True,
-        widget=forms.Textarea(attrs={"placeholder": "Tell us about yourself..."}),
-    )
-    
-    bio = forms.CharField(
-        label="",
-        max_length=1000,
-        required=True,
-        widget=forms.Textarea(attrs={"placeholder": "Tell us about yourself..."}),
-    )
-
+"""
