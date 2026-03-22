@@ -5,12 +5,12 @@ from django import forms
 
 
 class LoginForm(forms.Form):
-    username = forms.CharField(
+    email = forms.EmailField(
         max_length=50,
         label="",
-        widget=forms.TextInput(
+        widget=forms.EmailInput(
             attrs={
-                "placeholder": "Username",
+                "placeholder": "Email",
                 "required": True,
                 "autofocus": True,
             }

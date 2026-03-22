@@ -758,10 +758,9 @@ center p {
   gap: 1rem;
 }
 
-
 .faq_item {
   border-bottom: 1px solid var(--default_border);
-  padding: .5rem 0;
+  padding: 0.5rem 0;
 }
 
 .faq_question {
@@ -792,7 +791,6 @@ center p {
   color: var(--color_danger);
 }
 
-
 /* --------------------------------- Forms Styles ----------------------------------------------- */
 .form_section {
   display: grid;
@@ -811,28 +809,30 @@ center p {
 
 .form_section_note {
   display: grid;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 form {
   gap: 1rem;
 }
 
+
+
 .form_section input[type="text"],
 .form_section input[type="password"],
 .form_section input[type="email"],
 .form_section textarea,
 .form_section select {
-    width: 100%;              
-    padding: .5rem;
-    margin-bottom: 1rem;
-    border: 1px solid var(--default_border);
-    background-color: var(--color_dark_light);
-    border-radius: var(--border_radius);
-    box-sizing: border-box;    
-    transition: var(--transition);
-    font-weight: 550;
-    font-size: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--default_border);
+  background-color: var(--color_dark_light);
+  border-radius: var(--border_radius);
+  box-sizing: border-box;
+  transition: var(--transition);
+  font-weight: 550;
+  font-size: 1rem;
 }
 
 .form_section textarea {
@@ -843,9 +843,9 @@ form {
 .form_section input:focus,
 .form_section textarea:focus,
 .form_section select:focus {
-    border-color: var(--text_color);    /* focus color */
-    box-shadow: 0 0 5px rgba(16, 16, 16, 0.3);
-    outline: none;
+  border-color: var(--text_color); /* focus color */
+  box-shadow: 0 0 5px rgba(16, 16, 16, 0.3);
+  outline: none;
 }
 
 .form_section button {
@@ -869,11 +869,11 @@ form {
 .show_password {
   display: flex;
   align-items: center;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .show_password label {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 /* --------------------------------- App_users/profile Styles ----------------------------------------------- */
@@ -905,7 +905,7 @@ form {
 
 .primary_info_details {
   display: grid;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .location_and_language {
@@ -914,14 +914,16 @@ form {
   align-items: center;
 }
 
-.location, .language {
+.location,
+.language {
   display: flex;
-  gap: .5rem;
+  gap: 0.5rem;
   align-items: center;
 }
 
-.location i, .language i {
-  font-size: .8rem;
+.location i,
+.language i {
+  font-size: 0.8rem;
   color: var(--text_color);
 }
 
@@ -930,18 +932,18 @@ form {
   gap: 1rem;
   max-width: 70%;
   border: 1px solid var(--default_border);
-  padding: .5rem;
+  padding: 0.5rem;
   border-radius: var(--border_radius);
 }
 
 .primary_info_skills {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .info_skill {
-  padding: .5rem;
+  padding: 0.5rem;
   border: 1px solid var(--default_border);
   border-radius: var(--border_radius);
   text-align: center;
@@ -980,7 +982,7 @@ form {
 .portfolio_item_content {
   display: grid;
   grid-template-columns: 40% 60%;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .portfolio_item:hover {
@@ -1002,12 +1004,12 @@ form {
 
 .portfolio_desc {
   display: grid;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .more_details_link a {
   background-color: var(--default_bg_variant);
-  padding: .5rem;
+  padding: 0.5rem;
   border-radius: var(--border_radius);
   transition: var(--transition);
 }
@@ -1017,5 +1019,171 @@ form {
   box-shadow: var(--box_shadow_dark);
 }
 
+/* --------------------------------- services/more_services Styles ----------------------------------------------- */
+.more_services {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
 
+.more_services_service {
+  display: grid;
+  gap: 0.5rem;
+  transition: var(--transition);
+}
+
+.more_services_service:hover {
+  box-shadow: var(--box_shadow_dark);
+}
+
+/* --------------------------------- Floating Container Styles ----------------------------------------------- */
+.floating_container {
+  height: 70vh;
+  width: 50vw;
+  background-color: var(--color_dark_medium);
+  border-radius: var(--border_radius);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  overflow: hidden;
+  box-shadow: var(--box_shadow);
+}
+
+.auth_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start; /* aligns items to the top of each row */
+  align-content: start;
+}
+
+.auth_container_left {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.auth_container_left img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.general_auth_section {
+  display: grid;
+  padding: 3rem 1rem;
+  gap: 6rem;
+}
+
+.general_section {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.social_auth {
+  display: grid;
+  gap: .5rem;
+}
+
+.signup_link p a {
+  display: inline; /* ensure it's inline */
+  line-height: 1; /* match the parent */
+  vertical-align: baseline; /* align with surrounding text */
+  color: inherit; /* match text color */
+  text-decoration: underline;
+}
+
+.auth_link a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+  border: 1px solid var(--default_border);
+  border-radius: var(--border_radius);
+  transition: var(--transition);
+}
+
+.auth_link a:hover {
+  box-shadow: var(--box_shadow_dark);
+  background-color: var(--color_dark_light);
+}
+.auth_link a i {
+  font-size: .9rem;
+}
+
+.auth_tnc p {
+  font-size: 0.8rem;
+  line-height: 1; /* ensures the text and links are aligned vertically */
+  margin: 0;
+}
+
+.auth_tnc p a {
+  display: inline; 
+  vertical-align: baseline; 
+  color: inherit;
+  text-decoration: underline; 
+}
+
+
+
+
+/* --------------------------------- Floating Form Field Styles ----------------------------------------------- */
+.account_auth {
+  display: none;
+}
+.account_auth form {
+  display: grid;
+  gap: .5rem;
+}
+
+.form_field input[type="text"],
+.form_field input[type="password"],
+.form_field input[type="email"],
+.form_field textarea,
+.form_field select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--default_border);
+  background-color: var(--color_dark_light);
+  border-radius: var(--border_radius);
+  box-sizing: border-box;
+  transition: var(--transition);
+  font-weight: 550;
+}
+
+.form_field textarea {
+  resize: none;
+  height: 10rem;
+}
+
+.form_field input:focus,
+.form_field textarea:focus,
+.form_field select:focus {
+  border-color: var(--text_color); /* focus color */
+  box-shadow: 0 0 5px rgba(16, 16, 16, 0.3);
+  outline: none;
+}
+
+.form_field button {
+  background-color: var(--text_color_variant);
+  color: var(--default_bg);
+  padding: 0.5rem;
+  border-radius: var(--border_radius);
+  transition: var(--transition);
+  font-size: .9rem;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.form_field button:hover {
+  color: var(--color_dark_medium);
+  background-color: var(--text_color);
+  box-shadow: var(--box_shadow_dark);
+}
+
+/*
+.floating_container {
+  display: none;
+}
 

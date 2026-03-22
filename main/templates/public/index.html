@@ -1,6 +1,8 @@
 {% extends 'z_partials/layout.html' %} {% load static %} {% block content %}
 
 <!-- ---------------------------------- Hero Background Vid------------------------------------->
+{% include "z_partials/auth_container.html" %}
+
 <div class="hero_section">
   <video autoplay muted loop class="hero_video">
     <source src="{% static 'images/bg_vid.mp4' %}" type="video/mp4" />

@@ -19,3 +19,22 @@ showPassword.addEventListener("change", function () {
     password.type = type;
     confirmPassword.type = type;
 });
+
+// Floating Field Account Login Display
+const emailBtn = document.getElementById("emailSignIn");
+const socialAuth = document.querySelector(".social_auth");
+const accountAuth = document.querySelector(".account_auth");
+
+emailBtn.addEventListener("click", function (e) {
+    e.preventDefault(); // prevent page reload
+
+    socialAuth.style.display = "none";
+    accountAuth.style.display = "block";
+});
+
+// Back to Social Button
+const backBtn = document.getElementById("backToSocial");
+backBtn.addEventListener("click", function () {
+    accountAuth.style.display = "none";
+    socialAuth.style.display = "block";
+});
