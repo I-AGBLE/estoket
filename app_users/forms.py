@@ -1,9 +1,5 @@
 from django import forms
 
-
-from django import forms
-
-
 class LoginForm(forms.Form):
     email = forms.EmailField(
         max_length=50,
@@ -167,10 +163,7 @@ class CompanyForm(forms.Form):
     logo = forms.ImageField(label="Company Logo", required=False)
     background_image = forms.ImageField(label="Company Background Image", required=False)
     
-    
-    
-    
-    
+
 
 class ExpertiseForm(forms.Form):
     expertise_title = forms.CharField(

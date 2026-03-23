@@ -2,18 +2,78 @@
 
 <!-- ---------------------------------- Dashboard Panel ------------------------------------->
 <div class="dashboard">
+  {% include 'company_dashboard/dashboard_layout.html' %}
 
+  <div class="dashboard_content">
+    <div class="dashboard_table">
+      <div class="dashboard_table_title">
+        <h2>Our Social Links</h2>
 
-{% include 'company_dashboard/dashboard_layout.html' %}
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam iste
+          alias accusamus voluptates beatae est aliquam ducimus similique totam
+          quas amet, asperiores harum eum sunt, error fugiat et corporis quis
+          provident ab magni. Facilis iste, illo eos aut error debitis in qui
+          sequi ut consequuntur impedit laboriosam asperiores eum recusandae.
+        </p>
+      </div>
 
-<div class="dashboard_content">
-  <p>company links</p>
+      <div class="edit_bio_link">
+        <a href="">
+          <i class="fa-solid fa-plus"></i>
+          Add Link
+        </a>
+      </div>
+
+      <div class="dashboard_table_body">
+        <table>
+          <thead>
+            <tr>
+              <th>Platform</th>
+              <th>Address</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Google</td>
+              <td>james@gmail.com</td>
+              <td>
+                <a href=""><i class="fa-solid fa-pen"></i></a>
+              </td>
+              <td>
+                <a href=""><i class="fa-regular fa-eye"></i></a>
+              </td>
+            </tr>
+
+              <tr>
+              <td>Facebook</td>
+              <td>facebook.com/@james</td>
+              <td>
+                <a href=""><i class="fa-solid fa-pen"></i></a>
+              </td>
+              <td>
+                <a href=""><i class="fa-regular fa-eye"></i></a>
+              </td>
+            </tr>
+
+              <tr>
+              <td>Twitter</td>
+              <td>twitter.com/@james</td>
+              <td>
+                <a href=""><i class="fa-solid fa-pen"></i></a>
+              </td>
+              <td>
+                <a href=""><i class="fa-regular fa-eye"></i></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  {% endblock %}
 </div>
-
-
-
-{% endblock %}
-
-
-</div>
-
