@@ -25,3 +25,15 @@ def more_services(request):
     return render(request, 'services/more_services.html', {
         'login_form': login_form
     })
+    
+def dashboard(request):
+    return render(request, 'company_dashboard/index.html')
+
+def company_services(request):
+    return render(request, 'company_dashboard/company_services.html')
+
+def company_expertise(request):
+    return render(request, 'company_dashboard/company_expertise.html')
+
+def company_links(request):
+    return render(request, 'company_dashboard/company_links.html')

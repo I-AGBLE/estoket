@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .forms import LoginForm, SignupForm
+from .forms import LoginForm, SignupForm, CompanyForm
 
 # Create your views here.
 def index(request):
@@ -23,4 +23,11 @@ def signup_continue(request):
     
     return render(request, 'signup_continue.html', {
         'signup_form': signup_form
+    })
+    
+def register_company(request):
+    register_company_form = CompanyForm()
+    
+    return render(request, 'company/register_company.html', {
+        'register_company_form': register_company_form
     })

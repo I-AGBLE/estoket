@@ -1,0 +1,57 @@
+{% load static %}
+<!-- ---------------------------------- Dashboard Panel ------------------------------------->
+<div class="dashboard_panel">
+  <div class="panel_profile">
+    <div class="panel_image">
+      <img src="{% static 'images/logo.png' %}" alt="" />
+    </div>
+
+    <div class="panel_details">
+      <h4>James Gunner</h4>
+      <p>Software Engineer</p>
+
+      <div class="location">
+        <i class="fa-solid fa-map-pin"></i>
+        <p>Accra, Ghana</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel_links">
+    <div
+      class="panel_link {% if request.resolver_match.url_name == 'dashboard' %}active{% endif %}"
+    >
+      <a href="{% url 'public:dashboard' %}">
+        <i class="fa-regular fa-user"></i>
+        Dashboard</a
+      >
+    </div>
+
+    <div
+      class="panel_link {% if request.resolver_match.url_name == 'company_services' %}active{% endif %}"
+    >
+      <a href="{% url 'public:company_services' %}">
+        <i class="fa-solid fa-briefcase"></i>
+        Services</a
+      >
+    </div>
+
+    <div
+      class="panel_link {% if request.resolver_match.url_name == 'company_expertise' %}active{% endif %}"
+    >
+      <a href="{% url 'public:company_expertise' %}">
+        <i class="fa-solid fa-arrows-to-circle"></i>
+        Expertise</a
+      >
+    </div>
+
+    <div
+      class="panel_link {% if request.resolver_match.url_name == 'company_links' %}active{% endif %}"
+    >
+      <a href="{% url 'public:company_links' %}">
+        <i class="fa-solid fa-link"></i>
+        Links</a
+      >
+    </div>
+  </div>
+</div>

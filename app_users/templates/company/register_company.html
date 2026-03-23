@@ -1,0 +1,27 @@
+{% extends "z_partials_users/layout.html" %} {% load static %} {%block content%}
+{% include "z_partials/auth_container.html" %}
+
+<div class="form_section">
+  <div class="form_section_note">
+    <h1>Register Your Company</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos iure
+      quos enim quam deserunt eum quis tempore accusantium fugiat doloremque!
+    </p>
+  </div>
+
+  <form action="" method="POST">
+    {% csrf_token %}
+
+    {{ register_company_form.as_p }}
+
+    <div class="form_button">
+      <button>Register</button>
+    </div>
+
+    <a href="{% url 'public:dashboard'  %}">Dashboard</a>
+
+</form>
+</div>
+
+{% endblock content %}
