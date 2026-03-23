@@ -23,3 +23,29 @@ class ServiceForm(forms.ModelForm):
                 'rows': 4
             }),
         }
+        
+
+from django import forms
+from .models import Expertise
+
+class ExpertiseForm(forms.ModelForm):
+    class Meta:
+        model = Expertise
+        fields = ['expertise_title', 'about_expertise']
+
+        labels = {
+            'expertise_title': '',
+            'about_expertise': '',
+        }
+
+        widgets = {
+            'expertise_title': forms.TextInput(attrs={
+                'placeholder': 'Enter expertise title',
+                'class': 'form-control'
+            }),
+            'about_expertise': forms.Textarea(attrs={
+                'placeholder': 'Describe your expertise',
+                'class': 'form-control',
+                'rows': 4
+            }),
+        }

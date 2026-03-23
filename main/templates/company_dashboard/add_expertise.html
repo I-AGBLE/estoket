@@ -1,0 +1,37 @@
+{% extends 'z_partials/layout.html' %} {% load static %} {% block content %}
+
+<!-- ---------------------------------- Dashboard Panel ------------------------------------->
+<div class="dashboard">
+  {% include 'company_dashboard/dashboard_layout.html' %}
+
+  <div class="dashboard_content">
+    <div class="dashboard_form_section">
+      <div class="form_section_note">
+        <h1>Add Expertise</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+          iure quos enim quam deserunt eum quis tempore accusantium fugiat
+          doloremque!
+        </p>
+      </div>
+
+      <div class="edit_bio_link">
+        <a href="{% url 'public:dashboard' %}">
+          <i class="fa-regular fa-user"></i>
+          Dashboard
+        </a>
+      </div>
+
+      <form action="" method="POST">
+        {% csrf_token %} {{ expertise_form.as_p }}
+
+        <div class="form_button">
+          <button>Next</button>
+          <a href=""></a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  {% endblock %}
+</div>
