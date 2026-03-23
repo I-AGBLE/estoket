@@ -37,3 +37,6 @@ def company_expertise(request):
 
 def company_links(request):
     return render(request, 'company_dashboard/company_links.html')
+
+def edit_bio(request):
+    return render(request, 'company_dashboard/edit_bio.html')

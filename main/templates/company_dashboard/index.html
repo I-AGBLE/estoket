@@ -2,18 +2,101 @@
 
 <!-- ---------------------------------- Dashboard Panel ------------------------------------->
 <div class="dashboard">
+  {% include 'company_dashboard/dashboard_layout.html' %}
 
+  <div class="dashboard_content">
+    <div class="dashboard_title">
+      <h1>Welcome to your dashboard!</h1>
+    </div>
 
-{% include 'company_dashboard/dashboard_layout.html' %}
+    <div class="edit_bio_link">
+      <a href="{% url 'public:edit_bio' %}">
+        <i class="fa-solid fa-pen"></i>
+        Edit Bio
+      </a>
+    </div>
 
-<div class="dashboard_content">
-  <p>profile</p>
+    <div class="background_image">
+      <img src="{% static 'images/logo.png' %}" alt="" />
+    </div>
+
+    <div class="dashboard_cards">
+      <div class="dashboard_card">
+        <div class="card_item">
+          <p>Location:</p>
+          <h3>Accra, Ghana</h3>
+        </div>
+
+        <div class="card_item">
+          <p>Company Size:</p>
+          <h3>1-10</h3>
+        </div>
+      </div>
+
+      <div class="dashboard_card">
+        <div class="card_item">
+          <p>Industry:</p>
+          <h3>Tech</h3>
+        </div>
+
+        <div class="card_item">
+          <p>Year Founded:</p>
+          <h3>1998</h3>
+        </div>
+      </div>
+
+      <div class="dashboard_card">
+        <div class="card_item">
+          <p>Email:</p>
+          <h3>hello@world.com</h3>
+        </div>
+
+        <div class="card_item">
+          <p>Telephone:</p>
+          <h3>+233241445356</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="dashboard_about">
+      <h2>About Us</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quo
+        quas aspernatur incidunt quos asperiores explicabo obcaecati dignissimos
+        fugit expedita facere, exercitationem ipsum inventore? Hic quod officia
+        iusto laboriosam nemo recusandae, quaerat distinctio odit earum quae
+        exercitationem maiores, sapiente suscipit tenetur sequi nisi ullam
+        assumenda a cupiditate id sunt. Libero ipsam voluptatem necessitatibus
+        sint voluptas et minus cum nisi provident facere a in impedit quae totam
+        officiis explicabo suscipit sit, aspernatur quisquam iure esse harum!
+        Porro vero ipsa ratione libero mollitia necessitatibus exercitationem
+        cumque architecto, optio possimus corporis quis, reprehenderit fugit
+        dolorem suscipit dolore velit nam ipsam laudantium voluptatum doloribus
+        est alias. Harum ratione qui saepe eveniet ipsa quo magni ad, reiciendis
+        vitae dolore alias dicta, illo voluptas distinctio quidem aut ea?
+        Numquam sapiente animi ullam, nesciunt cupiditate voluptates eligendi
+        debitis omnis similique, tempore qui doloribus? Nostrum, saepe! Maxime
+        nesciunt quia sit sapiente voluptatem fugit eum minima, quis autem
+        aspernatur fugiat voluptatibus, nam illo odit quam, enim velit atque
+        sunt dolore consectetur? Facilis consequatur veritatis quisquam
+        voluptatibus reiciendis, iusto porro voluptate dolorum nisi architecto
+        maxime tempore! Quia, ut labore nobis optio quidem error. A soluta
+        numquam quisquam, cupiditate mollitia quia. Asperiores, deserunt! Aut
+        soluta sunt neque fugiat vel sit debitis voluptatum laborum voluptates
+        quaerat. Illum expedita beatae tempore obcaecati id nemo nam officia qui
+        minus numquam natus, et laborum reiciendis earum placeat vero officiis!
+        Mollitia sint atque nam dolor et at beatae nihil aliquid, error ut
+        magnam aut sapiente laudantium ipsa labore voluptate consequatur
+        dignissimos nulla rem. Pariatur, nostrum facere sit praesentium
+        reprehenderit laudantium culpa quidem officiis nesciunt debitis ratione
+        enim expedita aliquid doloribus suscipit repudiandae cumque quos ipsum
+        voluptatem esse. Illum assumenda optio, suscipit ex, veritatis, atque
+        vero quidem sunt quas tenetur vitae est quis repellat dolore omnis eum
+        praesentium doloribus earum ut ab possimus quisquam! Ipsum, praesentium
+        repellat?
+      </p>
+    </div>
+  </div>
+
+  {% endblock %}
 </div>
-
-
-
-{% endblock %}
-
-
-</div>
-

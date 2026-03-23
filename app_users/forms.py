@@ -165,6 +165,8 @@ class CompanyForm(forms.Form):
     )
 
     logo = forms.ImageField(label="Company Logo", required=False)
+    background_image = forms.ImageField(label="Company Background Image", required=False)
+    
     
     
     
