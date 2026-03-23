@@ -1425,3 +1425,50 @@ form {
 .dashboard_form_section .form_button {
   margin-bottom: 5rem;
 }
+
+.dashboard_table {
+  margin: 2rem 0;
+  overflow: hidden;
+}
+
+.dashboard_table_title {
+  margin-bottom: 2rem;
+  display: grid;
+  gap: .5rem;
+}
+
+.dashboard_table_body table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid var(--text_color); /* border around everything */
+}
+
+.dashboard_table_body {
+  height: 90vh;
+  overflow: scroll;
+  margin-bottom: 5rem;
+}
+
+th {
+  font-weight: 900;
+}
+
+th, td {
+  padding: .5rem;
+  text-align: left; /* align text to the left */
+}
+
+th {
+  background-color: var(--default_bg_variant); /* optional header styling */
+}
+
+tr:nth-child(even) {
+  background-color: var(--color_dark_medium); /* alternate row colors */
+}
+
+tr:hover {
+  background-color: var(--default_bg_variant);
+}
