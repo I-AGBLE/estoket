@@ -21,3 +21,13 @@ class Expertise(models.Model):
 
     def __str__(self):
         return self.expertise_title
+    
+    
+
+class FAQ(models.Model):
+    service = models.ForeignKey(Service, on_delete=models.CASCADE, related_name='faqs')
+    faq_question = models.CharField(max_length=255)
+    faq_answer = models.TextField()
+
+    def __str__(self):
+        return self.faq_question

@@ -49,3 +49,28 @@ class ExpertiseForm(forms.ModelForm):
                 'rows': 4
             }),
         }
+        
+from django import forms
+from .models import FAQ
+
+class FAQForm(forms.ModelForm):
+    class Meta:
+        model = FAQ
+        fields = ['faq_question', 'faq_answer']
+
+        labels = {
+            'faq_question': '',
+            'faq_answer': '',
+        }
+
+        widgets = {
+            'faq_question': forms.TextInput(attrs={
+                'placeholder': 'Enter FAQ question',
+                'class': 'form-control'
+            }),
+            'faq_answer': forms.Textarea(attrs={
+                'placeholder': 'Enter FAQ answer',
+                'class': 'form-control',
+                'rows': 3
+            }),
+        }

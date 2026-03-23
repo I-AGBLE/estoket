@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from app_users.forms import LoginForm, CompanyForm
-from main.forms import ServiceForm, ExpertiseForm
+from main.forms import ServiceForm, ExpertiseForm, FAQForm
 
 # Create your views here.
 def index(request):
@@ -59,4 +59,11 @@ def add_expertise(request):
     
     return render(request, 'company_dashboard/add_expertise.html', {
         'expertise_form': expertise_form
+    })
+    
+def add_faq(request):
+    faq_form = FAQForm()
+    
+    return render(request, 'company_dashboard/add_faq.html', {
+        'faq_form': faq_form
     })
