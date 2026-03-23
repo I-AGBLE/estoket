@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from app_users.forms import LoginForm
+from app_users.forms import LoginForm, CompanyForm
 
 # Create your views here.
 def index(request):
@@ -39,4 +39,8 @@ def company_links(request):
     return render(request, 'company_dashboard/company_links.html')
 
 def edit_bio(request):
-    return render(request, 'company_dashboard/edit_bio.html')
+    edit_company_form = CompanyForm()
+    
+    return render(request, 'company_dashboard/edit_bio.html', {
+        'edit_company_form': edit_company_form
+    })
