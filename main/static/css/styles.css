@@ -1378,6 +1378,7 @@ form {
 .dashboard_form_section input[type="email"],
 .dashboard_form_section input[type="date"],
 .dashboard_form_section input[type="number"],
+.dashboard_form_section input[type="url"],
 .dashboard_form_section textarea,
 .dashboard_form_section select {
   width: 100%;

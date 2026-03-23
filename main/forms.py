@@ -104,3 +104,30 @@ class PackageForm(forms.ModelForm):
                 'rows': 3
             }),
         }
+        
+
+
+
+from django import forms
+from .models import Link
+
+class LinkForm(forms.ModelForm):
+    class Meta:
+        model = Link
+        fields = ['platform', 'platform_address']
+
+        labels = {
+            'platform': '',
+            'platform_address': '',
+        }
+
+        widgets = {
+            'platform': forms.TextInput(attrs={
+                'placeholder': 'Enter platform name (e.g., Facebook)',
+                'class': 'form-control'
+            }),
+            'platform_address': forms.URLInput(attrs={
+                'placeholder': 'Enter platform URL',
+                'class': 'form-control'
+            }),
+        }

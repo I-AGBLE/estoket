@@ -49,3 +49,15 @@ class Package(models.Model):
 
     def __str__(self):
         return f"{self.package_type} - {self.package_price}"
+
+
+
+from django.db import models
+
+class Link(models.Model):
+    service = models.ForeignKey(Service, on_delete=models.CASCADE, related_name='links')
+    platform = models.CharField(max_length=255)  # e.g., "Facebook", "LinkedIn"
+    platform_address = models.URLField(max_length=500)  # the actual link
+
+    def __str__(self):
+        return f"{self.platform} - {self.platform_address}"

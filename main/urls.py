@@ -18,4 +18,5 @@ urlpatterns = [
     path("add_expertise/", views.add_expertise, name="add_expertise"),
     path("add_faq/", views.add_faq, name="add_faq"),
     path("add_package/", views.add_package, name="add_package"),
+    path("add_link/", views.add_link, name="add_link"),
 ]
