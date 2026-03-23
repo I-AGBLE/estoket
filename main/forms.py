@@ -74,3 +74,33 @@ class FAQForm(forms.ModelForm):
                 'rows': 3
             }),
         }
+        
+
+from django import forms
+from .models import Package
+
+class PackageForm(forms.ModelForm):
+    class Meta:
+        model = Package
+        fields = ['package_type', 'package_price', 'package_desc']
+
+        labels = {
+            'package_type': '',
+            'package_price': '',
+            'package_desc': '',
+        }
+
+        widgets = {
+            'package_type': forms.Select(attrs={
+                'class': 'form-control'
+            }),
+            'package_price': forms.NumberInput(attrs={
+                'placeholder': 'Enter package price',
+                'class': 'form-control'
+            }),
+            'package_desc': forms.Textarea(attrs={
+                'placeholder': 'Describe the package',
+                'class': 'form-control',
+                'rows': 3
+            }),
+        }
